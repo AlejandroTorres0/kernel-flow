@@ -84,17 +84,6 @@ class PresentacionConsola:
         """Informa el archivo cargado antes del primer evento."""
         print(f"KernelFlow | Procesos cargados desde: {ruta_csv}")
 
-    def mostrar_evento(self, evento: EventoPlanificador) -> None:
-        """Imprime el evento y una instantanea del sistema en ese momento."""
-        print("\n" + "-" * 60)
-        print(f"t = {evento.tiempo} | {evento.detalle}")
-        for linea in self.lineas_resumen(evento.tiempo):
-            print(linea)
-        print("PROCESOS:")
-        print(self.tabla_procesos())
-        print("TABLA DE PARTICIONES DE MEMORIA (KB):")
-        print(self.tabla_memoria())
-
     def mostrar_fin(self, tiempo: int) -> None:
         """Cierra la salida y presenta el informe estadistico."""
         print("\n" + "-" * 60)
